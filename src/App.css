@@ -13,40 +13,109 @@ code {
 }
 
 .App {
+  height: 100vh;
+  background-color: #282c34;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /*font-size: calc(10px + 2vmin);*/
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  background: #1a1e23;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.navbar-link {
+  padding: 0 15px;
+}
+
+.navbar-link a {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  font-family: Lato, sans-serif;
+  color: #ecf0f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.navbar-link a::after {
+  position: absolute;
+  content: "";
+  top: 95%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.navbar-link a:hover {
+  color: #95a5a6;
+}
+
+.navbar-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+
+button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  color: #ffffff;
+  background-color: #8a8585;
+}
+
+button:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: rgb(182, 182, 182);
 }
